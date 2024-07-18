@@ -36,7 +36,7 @@ function NavBar() {
                             <Button
                                 key={page}
                                 onClick={() => {
-                                    navigate(`/${page}`)
+                                    navigate(`${page}`)
                                 }}
                                 sx={{my: 2, color: 'white', display: 'block'}}
                             >
