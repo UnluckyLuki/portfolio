@@ -15,7 +15,7 @@ const MatrixBackground = () => {
                 }
                 return prevStreams;
             });
-        }, 400);
+        }, 250);
         return () => clearInterval(intervalId);
     }, []);
 

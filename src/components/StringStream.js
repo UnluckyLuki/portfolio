@@ -2,9 +2,9 @@ import React, {useEffect, useState} from 'react';
 
 const VALID_CHAR = "!#$%&()*+,.-/01234567689:<>=?ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz{}|"
 const MIN_STREAM_SIZE = 15;
-const MAX_STREAM_SIZE = 40;
-const MIN_FONT_SIZE = 20;
-const MAX_FONT_SIZE = 35;
+const MAX_STREAM_SIZE = 30;
+const MIN_FONT_SIZE = 15;
+const MAX_FONT_SIZE = 40;
 
 
 const getRandomChar = () => VALID_CHAR.charAt(Math.floor(Math.random() * VALID_CHAR.length));
@@ -13,6 +13,7 @@ const getStream = () => Array.from({length: getRandomSize()}, getRandomChar).joi
 const getXPosition = () => Math.floor(Math.random() * (window.innerWidth));
 const getYPosition = () => Math.floor(Math.random() * (window.innerHeight / 5));
 const getRandomFontSize = () => Math.floor(Math.random() * (MAX_FONT_SIZE - MIN_FONT_SIZE)) + MIN_FONT_SIZE;
+const getRandomTime = () => Math.floor(Math.random() * (80 - 30)) + 30;
 
 
 const StringStream = ({id, onEnd}) => {
@@ -21,6 +22,7 @@ const StringStream = ({id, onEnd}) => {
     const [XPosition, setXPosition] = useState(getXPosition());
     const [fontSize, setFontSize] = useState(getRandomFontSize());
     const [visibleCharacters, setVisibleCharacters] = useState(1)
+    const [animationTime, setAnimationTime] = useState(getRandomTime());
 
     useEffect(() => {
         const intervalId = setInterval(() => {
@@ -32,7 +34,7 @@ const StringStream = ({id, onEnd}) => {
                 }
                 return newVisibleCharacters;
             })
-        }, 50);
+        }, animationTime);
         return () => clearInterval(intervalId);
     }, [id, onEnd, stream.length])
 
