@@ -51,7 +51,7 @@ const StringStream = ({id, onEnd}) => {
                 textOrientation: 'upright',
                 whiteSpace: 'nowrap',
                 userSelect: 'none',
-                textShadow: `0px 0px ${fontSize / 3}px rgba(32, 194, 14, 0.8)`,
+                textShadow: `0px 0px ${fontSize - 3}px rgba(32, 194, 14, 0.8)`,
                 fontSize: `${fontSize}px`,
             }}>
             {stream.split('').map((char, index) => (

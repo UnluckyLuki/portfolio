@@ -22,7 +22,6 @@ const MatrixBackground = () => {
     const handleStreamEnd = (index) => {
         setStreams((prevStreams) => prevStreams.filter(stream => stream.id !== index));
     };
-    console.log(streams)
     return (
         <div style={{
             position: "absolute",
