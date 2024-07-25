@@ -24,13 +24,13 @@ const MatrixBackground = () => {
     };
     return (
         <div style={{
-            position: "absolute",
+            position: "fixed",
             backgroundColor: "black",
             top: 0,
             left: 0,
             zIndex: -1,
-            height: '100dvh',
-            width: '100dvw',
+            height: '100vh',
+            width: '100vw',
             overflow: 'hidden'
         }}>
             {streams.map((stream) => (

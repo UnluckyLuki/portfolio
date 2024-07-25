@@ -5,6 +5,29 @@ import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
 
+const linkIcons = [
+    {
+        name: 'GitHub',
+        url: 'https://github.com/UnluckyLuki',
+        icon: <GitHubIcon/>,
+    },
+    {
+        name: 'Email',
+        url: 'mailto: lukasz.wazelin@gmail.com',
+        icon: <AlternateEmailIcon/>,
+    },
+    {
+        name: 'LinkedIn',
+        url: 'https://www.linkedin.com/in/łukasz-wazelin-8719b631a/',
+        icon: <LinkedInIcon/>,
+    },
+    {
+        name: 'CV',
+        url: 'https://github.com/UnluckyLuki',
+        icon: <ContactPageIcon/>,
+    },
+]
+
 const Links = () => {
     const isXSmall = useMediaQuery('(max-width:600px)');
     const isSmall = useMediaQuery('(min-width:601px) and (max-width:960px)');
@@ -13,67 +36,36 @@ const Links = () => {
 
     const iconSize = isXSmall ? 25 : isSmall ? 50 : isMedium ? 100 : isLarge ? 150 : 100;
     return (
-        <>
-            <Grid container justifyContent={"space-evenly"} spacing={2} direction={"column"} alignSelf='center'
-                  alignItems={"center"} m={"auto"}>
-                <Grid key={'github'} item>
+        <Grid container justifyContent="space-between" alignItems="center" spacing={2}>
+            {linkIcons.map((icon, index) => (
+                <Grid key={index} item xs={3} sm={3} md={12} display="flex" justifyContent="center" alignItems="center">
                     <IconButton
                         onClick={() => {
+                            if (icon.name === 'Email') {
+                                window.location.href = icon.url;
+                            } else {
+                                window.open(icon.url, '_blank', 'noopener,noreferrer');
+                            }
                         }}
                         sx={{
                             '&:hover': {
                                 backgroundColor: 'transparent'
                             }
-                        }}>
-                        <GitHubIcon
-                            sx={{fontSize: iconSize, color: 'rgba(39, 181, 113, 0.8)', '&:hover': {color: '#fbfbfb'}}}/>
-                    </IconButton>
-                </Grid>
-                <Grid key={'email'} item>
-                    <IconButton
-                        onClick={() => {
                         }}
-                        sx={{
-                            '&:hover': {
-                                backgroundColor: 'transparent'
-                            }
-                        }}>
-                        <AlternateEmailIcon
-                            sx={{fontSize: iconSize, color: 'rgba(39, 181, 113, 0.8)', '&:hover': {color: '#fbfbfb'}}}/>
-                    </IconButton>
-                </Grid>
-                <Grid key={'linkedIn'} item>
-                    <IconButton
-                        onClick={() => {
-                        }}
-                        sx={{
-                            '&:hover': {
-                                backgroundColor: 'transparent'
-                            }
-                        }}>
-                        <LinkedInIcon
-                            sx={{
+                    >
+                        {React.cloneElement(icon.icon, {
+                            sx: {
                                 fontSize: iconSize,
                                 color: 'rgba(39, 181, 113, 0.8)',
-                                '&:hover': {color: '#fbfbfb'}
-                            }}/>
+                                '&:hover': {
+                                    color: '#fbfbfb',
+                                },
+                            },
+                        })}
                     </IconButton>
                 </Grid>
-                <Grid key={'cv'} item>
-                    <IconButton
-                        onClick={() => {
-                        }}
-                        sx={{
-                            '&:hover': {
-                                backgroundColor: 'transparent'
-                            }
-                        }}>
-                        <ContactPageIcon
-                            sx={{fontSize: iconSize, color: 'rgba(39, 181, 113, 0.8)', '&:hover': {color: '#fbfbfb'}}}/>
-                    </IconButton>
-                </Grid>
-            </Grid>
-        </>
+            ))}
+        </Grid>
     );
 };
 
