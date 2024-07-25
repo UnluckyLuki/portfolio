@@ -6,7 +6,6 @@ import Box from "@mui/material/Box";
 const BugsCard = () => {
     return (
         <Box
-            width='90%'
             height={"100%"}
             alignSelf='center'
             justifyContent="center"

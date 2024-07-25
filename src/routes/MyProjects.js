@@ -60,7 +60,7 @@ const MyProjects = () => {
 
     return (
         <Box
-            pt={2}
+            pt={10}
             m={"auto"}
             justifyContent={"center"}
             alignItems={"center"}

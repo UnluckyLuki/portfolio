@@ -2,7 +2,6 @@ import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import {useNavigate} from "react-router-dom";
 
@@ -12,8 +11,18 @@ function NavBar({clicked, setClicked}) {
     const navigate = useNavigate()
 
     return (
-        <AppBar position="static"
-                sx={{backgroundColor: 'rgba(25, 32, 28, 0.8)', boxShadow: 'none', backgroundImage: "none"}}>
+        <AppBar
+            position="fixed"
+            sx={{
+                backgroundColor: 'rgba(25, 32, 28, 0.8)',
+                boxShadow: 'none',
+                backgroundImage: "none",
+                top: 0,
+                left: 0,
+                right: 0,
+                zIndex: 1200
+            }}
+        >
             <Toolbar disableGutters>
                 <Box sx={{flexGrow: 2, display: 'flex'}} justifyContent={"center"}>
                     {pages.map((page) => (

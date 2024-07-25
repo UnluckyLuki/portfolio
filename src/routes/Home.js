@@ -10,17 +10,17 @@ const Home = () => {
 
     return (
         <Box
-            pt={2}
+            pt={10}
             m={"auto"}
             justifyContent={"center"}
             alignItems={"center"}
             width={"95%"}
             height={"100%"}>
-            <Grid container justifyContent={"space-between"} spacing={2}>
-                <Grid key={"aboutMe"} item xs={12} sm={12} md={8} m={"auto"}>
+            <Grid container justifyContent={"space-between"} spacing={6}>
+                <Grid key={"aboutMe"} item xs={12} sm={12} md={8}>
                     <AboutMe/>
                 </Grid>
-                <Grid key={"bugs"} item xs={12} sm={12} md={2} m={"auto"}>
+                <Grid key={"bugs"} item xs={12} sm={12} md={2}>
                     <BugsCard/>
                 </Grid>
                 <Grid
