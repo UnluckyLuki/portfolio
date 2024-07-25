@@ -38,7 +38,7 @@ const Links = () => {
     return (
         <Grid container justifyContent="space-between" alignItems="center" spacing={2}>
             {linkIcons.map((icon, index) => (
-                <Grid key={index} item xs={3} sm={3} md={12} display="flex" justifyContent="center" alignItems="center">
+                <Grid key={index} item xs={3} sm={3} md={3} lg={12} display="flex" justifyContent="center" alignItems="center">
                     <IconButton
                         onClick={() => {
                             if (icon.name === 'Email') {

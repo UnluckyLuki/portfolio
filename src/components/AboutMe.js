@@ -5,7 +5,6 @@ import Box from "@mui/material/Box";
 const AboutMe = () => {
     return (
         <Box
-            height={"100%"}
             alignSelf='center'
             m={"auto"}
             display="flex"
