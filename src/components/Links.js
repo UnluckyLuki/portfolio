@@ -4,6 +4,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
+import cv from "../CV_LW.pdf";
 
 const linkIcons = [
     {
@@ -23,7 +24,7 @@ const linkIcons = [
     },
     {
         name: 'CV',
-        url: 'https://github.com/UnluckyLuki',
+        url: cv,
         icon: <ContactPageIcon/>,
     },
 ]
