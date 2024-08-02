@@ -5,8 +5,8 @@ import ProjectCard from "../components/ProjectCard";
 
 const projects = [
     {
-        name: "CrptoIdle",
-        description: "Idle game created for engineering thesis made in Flutter.",
+        name: "CryptoIdle",
+        description: "CryptoIdle is an idle game developed as an engineering thesis project by a two-person team using Flutter. In this game, players engage in cryptocurrency mining and investment strategies to maximize their virtual wealth over time. The game features a range of idle mechanics, investment options, and progress tracking to provide a comprehensive and engaging experience.",
         urls: [{
             name: 'GitHub link',
             url: 'https://github.com/UnluckyLuki/CryptoIdle.git',
@@ -15,7 +15,7 @@ const projects = [
     },
     {
         name: "Wordle",
-        description: "Wordle game created for collage project made by two-person group.",
+        description: "Wordle is a word puzzle game developed for a college project by a two-person team using Swift. Players must guess a 5-letter word within 5 tries. Each guess provides feedback with colors: Green indicates the letter is in the correct position, Yellow indicates the letter is in the word but in the wrong position, and Red indicates the letter is not in the word. The game challenges players' vocabulary and deduction skills.",
         urls: [{
             name: 'GitHub link',
             url: 'https://github.com/UnluckyLuki/Wordle_Project.git',
@@ -24,7 +24,7 @@ const projects = [
     },
     {
         name: "YeetBlog",
-        description: "A webpage where people can share theirs memes/posts/news with others.",
+        description: "YeetBlog is a social media web application developed for a college project using React for the front-end and Java Spring for the back-end. This platform allows users to create and share memes, posts, and news articles with others. Users can interact with the content through comments, and likes.",
         urls: [{
             name: 'GitHub link - FrontEnd',
             url: 'https://github.com/UnluckyLuki/yeetblog-frontend.git',
@@ -37,8 +37,7 @@ const projects = [
     },
     {
         name: "BoardGameEvent",
-        description: "Board Game Event is an application that allows users to make an appointment for a board game.\n" +
-            "User can create an event that will contain the number of players wanted for the game, the title of the board game, the place and date of the meeting. User can also search for interesting event and subscribe to it.",
+        description: "BoardGameEvent is an application designed to facilitate the organization of board game meetings. Users can create events specifying the number of players needed, the title of the board game, and the meeting's location and date. Additionally, users can browse existing events and sign up to participate. The app aims to bring board game enthusiasts together and streamline the process of arranging game sessions.",
         urls: [{
             name: 'GitHub link',
             url: 'https://github.com/Klizlo/BoardGameEvent.git',
@@ -47,7 +46,7 @@ const projects = [
     },
     {
         name: "ISProject",
-        description: "Another collage project merging sql database, java spring backend and react frontend with containerization. It focuses on game tier list based on steamDB database.",
+        description: "ISProject is a comprehensive college project that integrates an SQL database, a Java Spring back-end, and a React front-end, all containerized for seamless deployment. The project focuses on creating a game tier list based on data from SteamDB, allowing users to browse and rank games.",
         urls: [{
             name: 'GitHub link',
             url: 'https://github.com/Klizlo/isproject.git',
