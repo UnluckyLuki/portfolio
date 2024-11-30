@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Typography} from "@mui/material";
 import Box from "@mui/material/Box";
 import {ReactTyped} from "react-typed";
@@ -22,12 +22,12 @@ const AboutMe = () => {
                 Hi, I'm Łukasz
             </Typography>
             <Typography variant="h6" component="div" color={"#bcbdbd"}>
-                <ReactTyped
-                    strings={["Bio in progress.."]}
-                    typeSpeed={80}
-                    cursorChar={"."}
-                    showCursor={true}
-                />
+                I am a computer science graduate with a passion for programming and solving technology problems. I
+                specialize in Java and JavaScript, developing a solid foundation in backend and frontend application
+                development. During my studies, I have done academic projects using Spring Boot, React and Node.js.
+                I love working on challenges that allow me to develop skills and gain new experiences. I am eager to
+                learn new technologies and tools, adapting to the dynamic needs of projects. I am looking for a first
+                job where I can apply my knowledge, support the team and grow as a programmer.
             </Typography>
         </Box>
     );
